@@ -34,8 +34,8 @@ def aml():
         }
 
         # AML 設定 (請填入您的實際資訊)
-        url = '你的AML端點URL'
-        api_key = '你的API_KEY'
+        url = 'http://33699878-98ec-4caf-a06e-7957e1dad5d2.eastasia.azurecontainer.io/score'
+        api_key = 'ixQITDGT9MKP9fOHlqwyEhS1y37SdLhl'
         headers = {
             "Content-Type": "application/json",
             "Authorization": "Bearer " + api_key
