@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-Hant">
+    <head>
+        <title>XYZ金融公司分析表</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <h2>逾期繳費分析系統</h2>
+            <p>請輸入客戶相關資料，以進行違約風險評估。</p>
+            <hr>
+            <form action="/aml" method="post">
+                <div class="form-group">
+                    <label for="p1">兩年內是否曾嚴重逾期 (SeriousDlqin2yrs):</label>
+                    <select class="form-control" name="p1">
+                        <option value="1">是 (1)</option>
+                        <option value="0" selected>否 (0)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="p2">負債比 (DebtRatio):</label>
+                    <input type="text" class="form-control" name="p2" required placeholder="例如: 0.35">
+                </div>
+                <div class="form-group">
+                    <label for="p3">月收入 (MonthlyIncome):</label>
+                    <input type="number" class="form-control" name="p3" required placeholder="例如: 50000">
+                </div>
+                <div class="form-group">
+                    <label for="p4">逾期90天以上次數 (NumberOfTimes90DaysLate):</label>
+                    <input type="number" class="form-control" name="p4" required placeholder="例如: 0">
+                </div>
+                <button type="submit" class="btn btn-primary">開始分析</button>
+            </form>    
+        </div>
+    </body>    
+</html>
